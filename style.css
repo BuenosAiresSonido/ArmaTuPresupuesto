@@ -127,3 +127,7 @@ td,th{padding:8px;border-bottom:1px solid #333;}
     font-size:15px;
     font-weight:600;
 }
+
+.titulo-principal{
+    text-align:center;
+}
