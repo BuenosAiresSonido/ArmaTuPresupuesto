@@ -223,18 +223,18 @@ function generarWhatsApp(){
 
     let totalGeneral = 0;
 
-    let mensaje = "🎵 *BUENOS AIRES SONIDO*%0A";
+    let mensaje = "*BUENOS AIRES SONIDO*%0A";
     mensaje += "*PRESUPUESTO*%0A%0A";
 
-    if(nombre) mensaje += "👤 *Cliente:* " + nombre + "%0A";
-    if(telefono) mensaje += "📞 *Teléfono:* " + telefono + "%0A";
-    if(lugar) mensaje += "📍 *Lugar:* " + lugar + "%0A";
+    if(nombre) mensaje += "*Cliente:* " + nombre + "%0A";
+    if(telefono) mensaje += "*Teléfono:* " + telefono + "%0A";
+    if(lugar) mensaje += "*Lugar:* " + lugar + "%0A";
 
     if(fecha){
 
         const f = fecha.split("-");
 
-        mensaje += "📅 *Fecha:* " + f[2] + "/" + f[1] + "/" + f[0] + "%0A";
+        mensaje += "*Fecha:* " + f[2] + "/" + f[1] + "/" + f[0] + "%0A";
 
     }
 
@@ -278,7 +278,7 @@ totalGeneral.toLocaleString("es-AR") +
 
     }
 
-    mensaje += "%0AGracias por elegir *Buenos Aires Sonido* 🎵";
+    mensaje += "%0A*TU SONIDISTA AMIGO*";
 
     window.open(
         "https://wa.me/?text=" + mensaje,
