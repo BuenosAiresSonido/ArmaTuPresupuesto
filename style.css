@@ -46,12 +46,28 @@ padding:8px 0;
 border-bottom:1px solid #333;
 }
 button{
-background:#0066ff;
-color:#fff;
-border:none;
-padding:6px 12px;
-border-radius:6px;
-cursor:pointer;
+    display:block;
+    width:280px;
+    margin:25px auto 10px auto;
+
+    background:#25D366;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    padding:15px 20px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+    button:hover{
+    background:#1EBE5D;
+    transform:scale(1.03);
+
 }
 table{width:100%;border-collapse:collapse}
 td,th{padding:8px;border-bottom:1px solid #333;}
