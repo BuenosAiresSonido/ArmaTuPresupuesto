@@ -64,10 +64,6 @@ button{
     cursor:pointer;
 
     transition:0.3s;
-    button:hover{
-    background:#1EBE5D;
-    transform:scale(1.03);
-
 }
 table{width:100%;border-collapse:collapse}
 td,th{padding:8px;border-bottom:1px solid #333;}
