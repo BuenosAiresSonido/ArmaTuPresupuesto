@@ -4,10 +4,19 @@ font-family:Arial,sans-serif;
 background:#0b0b0b;
 color:white;
 }
-header{
-background:#003b8f;
-padding:20px;
-text-align:center;
+.hero{
+    width:100%;
+    height:220px;
+
+    background-image:url(ChatGPT Image 11 jul 2026, 17_14_43.png);
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.45);
 }
 main{
 padding:20px;
