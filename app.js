@@ -11,7 +11,7 @@ const conceptosFijos = [
     },
 
     {
-        nombre: "Traslado",
+        nombre: "Traslado zona (Norte / Oeste)",
         precio: 60000
     }
 
