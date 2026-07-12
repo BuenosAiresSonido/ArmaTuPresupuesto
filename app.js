@@ -164,23 +164,33 @@ function sumar(indice){
 
 function restar(indice){
 
-    const producto=productos[indice];
+    const producto = productos[indice];
 
-    const item=items.find(i=>i.nombre===producto.nombre);
+    const item = items.find(i => i.nombre === producto.nombre);
 
-    if(!item)return;
+    if(!item) return;
 
-    item.cantidad--;
+    // Si es un concepto fijo, nunca puede bajar de 1
+    if(producto.fijo){
 
-    if(item.cantidad<=0){
+        if(item.cantidad > 1){
+            item.cantidad--;
+        }
 
-        items=items.filter(i=>i.nombre!==producto.nombre);
+    }else{
+
+        item.cantidad--;
+
+        if(item.cantidad <= 0){
+            items = items.filter(i => i.nombre !== producto.nombre);
+        }
 
     }
 
     render();
 
 }
+
 
 function generarWhatsApp(){
 
@@ -233,16 +243,11 @@ render();
 
 function limpiarTodo(){
 
-    // Vaciar formulario
-    document.querySelectorAll("input").forEach(input=>{
-        input.value="";
-    });
+    // Mantener solamente los conceptos fijos
 
-    document.querySelector("textarea").value="";
-
-    // Reiniciar cantidades
-    items=[];
+    items = items.filter(item => item.fijo);
 
     render();
+
 
 }
