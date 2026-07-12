@@ -28,8 +28,6 @@ const productos = [
 
 ];
 
-];
-
 const lista = document.getElementById("lista");
 const carrito = document.getElementById("carrito");
 const total = document.getElementById("total");
