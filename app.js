@@ -272,4 +272,3 @@ function limpiarTodo(){
 
     render();
 
-}
