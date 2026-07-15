@@ -361,9 +361,30 @@ function limpiarTodo(){
     // Apagar el interruptor de Multitrack
     document.getElementById("chkMultitrack").checked = false;
 
+    document.getElementById("tituloCombo").textContent = "";
+
     render();
 
+    setTimeout(() => {
+
+        document.querySelector(".combos").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
+
+    setTimeout(() => {
+
+    document.querySelector(".combos").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}, 100);
+
 }
+
 
     render();
 
@@ -405,7 +426,6 @@ function toggleMultitrack(){
 // ===========================
 // CARGAR COMBO
 // ===========================
-
 function cargarCombo(nombreCombo){
 
     // Mantener únicamente los conceptos fijos
@@ -414,9 +434,22 @@ function cargarCombo(nombreCombo){
     // Buscar el combo seleccionado
     const combo = combos[nombreCombo];
 
+    const nombresBonitos = {
+
+        "50-solista":"Combo 50 Personas (Solista)",
+        "50-duo":"Combo 50 Personas (Duos)",
+        "50-trio":"Combo 50 Personas (Trios)",
+        "100-solista":"Combo 100 Personas (Solista)",
+        "100-duo":"Combo 100 Personas (Duos)",
+        "100-trio":"Combo 100 Personas (Trios)"
+
+    };
+
+    document.getElementById("tituloCombo").textContent =
+        nombresBonitos[nombreCombo];
+
     if(!combo) return;
 
-    // Agregar los productos del combo
     combo.forEach(productoCombo => {
 
         const producto = productos.find(p => p.nombre === productoCombo.nombre);
@@ -436,5 +469,14 @@ function cargarCombo(nombreCombo){
     });
 
     render();
+
+    setTimeout(() => {
+
+        document.querySelector(".resumen").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
 
 }
