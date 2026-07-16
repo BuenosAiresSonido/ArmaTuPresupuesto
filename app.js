@@ -550,11 +550,11 @@ texto += `${nombre} ${cantidad} $${subtotal.toLocaleString("es-AR")}%0A`;
 let incluidos = "";
 
 if(document.getElementById("chkVirtualizer").checked){
-    incluidos += `✅ Procesador V.2000%0A`;
+    incluidos += ` Procesador V.2000%0A`;
 }
 
 if(document.getElementById("chkEQ").checked){
-    incluidos += `✅ EQ 15x2 (Moon)%0A`;
+    incluidos += ` EQ 15x2 (Moon)%0A`;
 }
 if(incluidos !== ""){
     texto += `%0A*Equipamiento incluido:*%0A`;
@@ -627,7 +627,7 @@ document.getElementById("seccionProductos").style.display = "none";
 
 const btnEquipamiento = document.getElementById("btnEquipamiento");
 
-btnEquipamiento.textContent = "Mostrar equipamiento";
+btnEquipamiento.textContent = "Agregar equipamiento";
 
 productosConfirmados = [];
 cantidadesPendientes = {};
@@ -738,7 +738,7 @@ document.getElementById("resumen").classList.remove("oculto");
 
 const btnEquipamiento = document.getElementById("btnEquipamiento");
 btnEquipamiento.disabled = false;
-btnEquipamiento.textContent = "Mostrar equipamiento";
+btnEquipamiento.textContent = "Agregar equipamiento";
 
 setTimeout(() => {
 
@@ -800,7 +800,7 @@ if(mostrarEquipamiento){
 
 }else{
 
-    boton.textContent = "Mostrar equipamiento";
+    boton.textContent = "Agregar equipamiento";
     seccion.style.display = "none";
 
 }
