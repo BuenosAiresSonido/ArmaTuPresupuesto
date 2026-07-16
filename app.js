@@ -585,10 +585,10 @@ function limpiarConScroll(){
 
     resumen.classList.add("oculto");
 
-    document.querySelector(".combos").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+ document.getElementById("puntoScroll").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+});
 
     setTimeout(() => {
 
@@ -636,16 +636,7 @@ render();
 
 setTimeout(() => {
 
-    document.querySelector(".combos").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
-
-}, 100);
-
-setTimeout(() => {
-
-    document.getElementById("resumen").style.display = "none";
+   // document.getElementById("resumen").style.display = "none";
 
 }, 700);
 
