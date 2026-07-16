@@ -578,6 +578,7 @@ window.open(
 }
 
 render();
+
 function limpiarTodo(){
 
 items = conceptosFijos.map(c => ({
@@ -612,6 +613,9 @@ cantidadesPendientes = {};
 
     render();
 
+
+
+    
     setTimeout(() => {
 
         document.querySelector(".combos").scrollIntoView({
@@ -629,6 +633,8 @@ cantidadesPendientes = {};
     });
 
 }, 100);
+
+document.getElementById("resumen").style.display = "none";
 
 }
 
