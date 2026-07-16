@@ -634,7 +634,7 @@ cantidadesPendientes = {};
 
 
 const btnEquipamiento = document.getElementById("btnEquipamiento");
-btnEquipamiento.disabled = true;
+btnEquipamiento.disabled = false;
 btnEquipamiento.textContent = "Mostrar equipamiento";
 
     render();
