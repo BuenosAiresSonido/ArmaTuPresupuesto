@@ -579,7 +579,29 @@ window.open(
 
 render();
 
+function limpiarConScroll(){
+
+    const resumen = document.getElementById("resumen");
+
+    resumen.classList.add("oculto");
+
+    document.querySelector(".combos").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+    setTimeout(() => {
+
+        limpiarTodo();
+
+       
+
+    }, 500);
+
+}
+
 function limpiarTodo(){
+
 
 items = conceptosFijos.map(c => ({
     categoria: "CONCEPTOS FIJOS",
@@ -607,25 +629,25 @@ const btnEquipamiento = document.getElementById("btnEquipamiento");
 
 btnEquipamiento.textContent = "Mostrar equipamiento";
 
-
 productosConfirmados = [];
 cantidadesPendientes = {};
 
-    render();
+render();
 
+setTimeout(() => {
 
+    document.querySelector(".combos").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 
-    
-    setTimeout(() => {
+}, 100);
 
-        document.querySelector(".combos").scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+setTimeout(() => {
 
-    }, 100);
+    document.getElementById("resumen").style.display = "none";
 
-document.getElementById("resumen").style.display = "none";
+}, 700);
 
 }
 
@@ -718,7 +740,7 @@ function cargarCombo(nombreCombo, boton){
 }
 
     });
-
+document.getElementById("resumen").classList.remove("oculto");
     document.getElementById("resumen").style.display = "block";
   
     render();
