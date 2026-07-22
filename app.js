@@ -6,7 +6,7 @@ const conceptosFijos = [
 
     {
         nombre: "Operador de Sonido por Hora",
-        precio: 20000,
+        precio: 10000,
         cantidad: 2,
         minimo: 2
     },
